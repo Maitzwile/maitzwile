@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Портфолио</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: black;
+      color: white;
+      font-family: sans-serif;
+      padding: 40px 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      font-size: 16px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .card:hover .overlay {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align:center; margin-bottom: 30px;">Моё портфолио</h1>
+
+  <div class="grid">
+    <div class="card">
+      <img src="project1.jpg" alt="Проект 1" />
+      <div class="overlay">Проект 1</div>
+    </div>
+    <div class="card">
+      <img src="project2.jpg" alt="Проект 2" />
+      <div class="overlay">Проект 2</div>
+    </div>
+    <div class="card">
+      <img src="project3.jpg" alt="Проект 3" />
+      <div class="overlay">Проект 3</div>
+    </div>
+    <!-- Добавь свои проекты здесь -->
+  </div>
+
+</body>
+</html>
